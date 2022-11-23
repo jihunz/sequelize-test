@@ -4,13 +4,7 @@ const User = require('../models/user');
 const router = express.Router();
 
 router.get('/', async (req, res, next) => {
-    try {
-        const users = await User.findAll();
-        res.json(users);
-    } catch (e) {
-        console.error(e);
-        next(e);
-    }
+    console.log('request received');
 });
 
 module.exports = router;

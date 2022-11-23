@@ -14,6 +14,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="2HwK5mdSkFRcZYbDLuQtgffC2Sp" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -53,6 +56,7 @@
       <workItem from="1669190526006" duration="1978000" />
       <workItem from="1669192535955" duration="42000" />
       <workItem from="1669192585586" duration="8195000" />
+      <workItem from="1669213183012" duration="3707000" />
     </task>
     <servers />
   </component>
@@ -60,26 +64,34 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="3341" y="342" key="SettingsEditor" timestamp="1669200794068">
-      <screen x="2560" y="0" width="2560" height="1400" />
+    <state x="358" y="128" key="SettingsEditor" timestamp="1669215711622">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="358" y="128" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1669215711622" />
     <state x="781" y="342" key="SettingsEditor/0.0.2560.1400/2560.0.2560.1400@0.0.2560.1400" timestamp="1669191202752" />
     <state x="3341" y="342" key="SettingsEditor/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1669200794068" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1669201197681">
-      <screen x="2560" y="0" width="2560" height="1400" />
+    <state width="500" height="400" key="SwitcherDM" timestamp="1669217134377">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state width="500" height="400" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1669217134377" />
     <state width="498" height="446" key="SwitcherDM/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1669201197681" />
-    <state x="3523" y="415" width="633" height="570" key="find.popup" timestamp="1669202078085">
-      <screen x="2560" y="0" width="2560" height="1400" />
+    <state x="542" y="267" width="674" height="486" key="find.popup" timestamp="1669218161098">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="542" y="267" width="674" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1669218161098" />
     <state x="3523" y="415" width="633" height="570" key="find.popup/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1669202078085" />
+    <state x="414" y="245" key="git4idea.merge.GitPullDialog" timestamp="1669218130288">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="414" y="245" key="git4idea.merge.GitPullDialog/0.0.1440.900@0.0.1440.900" timestamp="1669218130288" />
     <state x="3481" y="426" width="700" height="530" key="recent.locations.popup" timestamp="1669196745884">
       <screen x="2560" y="0" width="2560" height="1400" />
     </state>
     <state x="3481" y="426" width="700" height="530" key="recent.locations.popup/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1669196745884" />
-    <state x="3503" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1669191883296">
-      <screen x="2560" y="0" width="2560" height="1400" />
+    <state x="530" y="203" width="670" height="436" key="search.everywhere.popup" timestamp="1669217129478">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="530" y="203" width="670" height="436" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1669217129478" />
     <state x="3503" y="315" width="672" height="678" key="search.everywhere.popup/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1669191883296" />
   </component>
 </project>

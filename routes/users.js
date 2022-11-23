@@ -27,7 +27,30 @@ router.route('/')
             console.error(e);
             next(e);
         }
-    });
+    })
+    .delete(async (req, res, next) => {
+        try {
+            Comment.destroy({truncate: true});
+            User.destroy({truncate: true});
+            res.status(200).json('delete completed');
+        } catch (e) {
+            console.error(e);
+            next(e);
+        }
+    })
+
+router.get('/comments', async (req, res, next) => {
+    try {
+        const comments = await User.findAll({
+            include: [{ model: Comment }]
+        });
+        console.log(comments);
+        res.json(comments);
+    } catch (e) {
+        console.error(e);
+        next(e);
+    }
+});
 
 router.get('/:id/comments', async (req, res, next) => {
     try {
@@ -45,20 +68,15 @@ router.get('/:id/comments', async (req, res, next) => {
     }
 });
 
-router.get('/:id/comments2', async (req, res, next) => {
+router.post('/bulk', async (req, res, next) => {
     try {
-        const comments = await User.findAll({
-            include: [{
-                model: Comment,
-                where: { id: req.params.id },
-            }]
-        });
-        console.log(comments);
-        res.json(comments);
+        const user = User.bulkCreate(req.body);
+        res.status(201).json(user);
     } catch (e) {
         console.error(e);
         next(e);
     }
 });
+
 
 module.exports = router;

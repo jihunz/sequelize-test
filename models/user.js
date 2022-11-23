@@ -6,7 +6,7 @@ class User extends Sequelize.Model {
             name: {
                 type: Sequelize.STRING(20),
                 allowNull: false,
-                unique: true,
+                unique: false,
             },
             age: {
                 type: Sequelize.INTEGER.UNSIGNED,
@@ -38,7 +38,7 @@ class User extends Sequelize.Model {
     }
 
     static associate(db) {
-        db.User.hasMany(db.Comment, { foreignKey: 'commenter', sourceKey: 'id' });
+        db.User.hasMany(db.Comment, { foreignKey: 'user_id', sourceKey: 'id', onDelete: 'cascade'});
     }
 };
 

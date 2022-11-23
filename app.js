@@ -18,7 +18,7 @@ nunjucks.configure('views', {
 });
 
 // 서버 시작 시 데이터베이스와 연결하기 위한 함수
-sequelize.sync({force: false}) // true: 테이블 생성, false: 테이블 비생성
+sequelize.sync({ force: false }) // true: 테이블 생성, false: 테이블 비생성
     .then(() => {
         console.log('데이터베이스 연결됨');
     }).catch((e) => {
