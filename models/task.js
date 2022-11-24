@@ -1,46 +1,37 @@
 const Sequelize = require('sequelize');
 
-class NiModule extends Sequelize.Model {
+class Task extends Sequelize.Model {
     static init(sequelize) {
         return super.init({
-            niModuleId: {
+            taskId: {
                 type: Sequelize.BIGINT,
                 primaryKey: true,
                 autoIncrement: true,
                 allowNull: false,
             },
-            name: {
+            taskName: {
                 type: Sequelize.STRING(100),
             },
-            productTypeOfficialName: {
-                type: Sequelize.STRING(50),
-            },
-            productNumberOfficialName: {
-                type: Sequelize.INTEGER,
-            },
-            desc: {
+            description: {
                 type: Sequelize.STRING(255),
             },
             createdAt: {
                 type: Sequelize.DATE,
                 defaultValue: Sequelize.NOW,
             },
-            createdUser: {
-                type: Sequelize.STRING(45),
-            },
             updatedAt: {
                 type: Sequelize.DATE,
                 defaultValue: Sequelize.NOW,
             },
-            updatedUser: {
+            userId: {
                 type: Sequelize.STRING(45),
             },
         }, {
             sequelize,
             timestamps: false,
             underscored: true,
-            modelName: 'niModule',
-            tableName: 'ni_module',
+            modelName: 'task',
+            tableName: 'task',
             paranoid: false,
             charset: 'utf8',
             collate: 'utf8_general_ci'
@@ -48,8 +39,9 @@ class NiModule extends Sequelize.Model {
     }
 
     static associate(db) {
-        db.NiModule.belongsToMany(db.Sensor, { foreignKey: 'ni_module_id', through: 'sensor_module_mapper'});
+        db.Task.hasMany(db.TaskWidget, { foreignKey: 'task_id', sourceKey: 'taskId'});
+        db.Task.belongsToMany(db.Company, { foreignKey: 'task_id', through: 'task_company_mapper' });
     }
 };
 
-module.exports = NiModule;
+module.exports = Task;

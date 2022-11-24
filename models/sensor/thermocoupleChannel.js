@@ -9,23 +9,43 @@ class ThermocoupleChannel extends Sequelize.Model {
                 autoIncrement: true,
                 allowNull: false,
             },
+            sensorId: {
+                type: Sequelize.BIGINT,
+                primaryKey: true,
+                foreignKey: true,
+                allowNull: false,
+
+            },
+            sensorTypeId: {
+                type: Sequelize.BIGINT,
+                primaryKey: true,
+                foreignKey: true,
+                allowNull: false,
+
+            },
             name: {
                 type: Sequelize.STRING(255),
             },
             maximum: {
                 type: Sequelize.DOUBLE,
+                defaultValue: 500,
+                validate: { isNumeric: true },
             },
             minimum: {
                 type: Sequelize.DOUBLE,
+                defaultValue: 0,
+                validate: { isNumeric: true },
             },
             thermocoupleType: {
                 type: Sequelize.STRING(45),
+                defaultValue: 'K',
             },
             thermocoupleTempUnit: {
                 type: Sequelize.STRING(45),
             },
             cjcType: {
                 type: Sequelize.STRING(45),
+                defaultValue: 'Internal',
             },
             cjcValue: {
                 type: Sequelize.DOUBLE,
@@ -35,6 +55,7 @@ class ThermocoupleChannel extends Sequelize.Model {
             },
             isScxiModule: {
                 type: Sequelize.BOOLEAN,
+                defaultValue: false,
             },
             autoZeroType: {
                 type: Sequelize.STRING(45),
@@ -42,24 +63,20 @@ class ThermocoupleChannel extends Sequelize.Model {
             description: {
                 type: Sequelize.STRING(255),
             },
-            createdDate: {
+            createdAt: {
                 type: Sequelize.DATE,
                 defaultValue: Sequelize.NOW,
             },
-            creator: {
-                type: Sequelize.STRING(50),
+            createdUser: {
+                type: Sequelize.STRING(45),
             },
-            updatedDate: {
+            updatedAt: {
                 type: Sequelize.DATE,
                 defaultValue: Sequelize.NOW,
             },
-            editor: {
-                type: Sequelize.STRING(50),
+            updatedUser: {
+                type: Sequelize.STRING(45),
             },
-            sensorTypeId: {
-                type: Sequelize.BIGINT,
-                foreignKey: true,
-            }
         }, {
             sequelize,
             timestamps: false,

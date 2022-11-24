@@ -25,7 +25,7 @@ class Sensor extends Sequelize.Model {
     }
 
     static associate(db) {
-        db.Sensor.belongsTo(db.SensorType, { foreignKey: 'sensor_type_id', sourceKey: 'sensorTypeId'});
+        db.Sensor.belongsTo(db.SensorType, { foreignKey: 'sensor_type_id', targetKey: 'sensorTypeId'});
 
         db.Sensor.hasMany(db.VoltageChannel, { foreignKey: 'sensor_id', sourceKey: 'sensorId'});
         db.Sensor.hasMany(db.CurrentChannel, { foreignKey: 'sensor_id', sourceKey: 'sensorId'});
@@ -33,7 +33,7 @@ class Sensor extends Sequelize.Model {
         db.Sensor.hasMany(db.AccelerometerChannel, { foreignKey: 'sensor_id', sourceKey: 'sensorId'});
         db.Sensor.hasMany(db.ThermocoupleChannel, { foreignKey: 'sensor_id', sourceKey: 'sensorId'});
 
-        db.Sensor.belongsToMany(db.NiModule, { foreignKey: 'sensor_id', through: 'sensor_module_mapping'});
+        db.Sensor.belongsToMany(db.NiModule, { foreignKey: 'sensor_id', through: 'sensor_module_mapper'});
     }
 };
 

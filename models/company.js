@@ -1,24 +1,27 @@
 const Sequelize = require('sequelize');
 
-class NiModule extends Sequelize.Model {
+class Company extends Sequelize.Model {
     static init(sequelize) {
         return super.init({
-            niModuleId: {
+            companyId: {
                 type: Sequelize.BIGINT,
                 primaryKey: true,
                 autoIncrement: true,
                 allowNull: false,
             },
-            name: {
-                type: Sequelize.STRING(100),
+            companyName: {
+                type: Sequelize.STRING(45),
             },
-            productTypeOfficialName: {
-                type: Sequelize.STRING(50),
+            address: {
+                type: Sequelize.STRING(255),
             },
-            productNumberOfficialName: {
+            mainProduct: {
+                type: Sequelize.STRING(90),
+            },
+            employee_count: {
                 type: Sequelize.INTEGER,
             },
-            desc: {
+            description: {
                 type: Sequelize.STRING(255),
             },
             createdAt: {
@@ -39,8 +42,8 @@ class NiModule extends Sequelize.Model {
             sequelize,
             timestamps: false,
             underscored: true,
-            modelName: 'niModule',
-            tableName: 'ni_module',
+            modelName: 'company',
+            tableName: 'company',
             paranoid: false,
             charset: 'utf8',
             collate: 'utf8_general_ci'
@@ -48,8 +51,11 @@ class NiModule extends Sequelize.Model {
     }
 
     static associate(db) {
-        db.NiModule.belongsToMany(db.Sensor, { foreignKey: 'ni_module_id', through: 'sensor_module_mapper'});
+        db.Company.hasMany(db.Users, { foreignKey: 'company_id', sourceKey: 'companyId'});
+        db.Company.hasMany(db.CompanyFacilityMapper, { foreignKey: 'company_id', sourceKey: 'companyId'});
+        db.Company.belongsTo(db.Industrial, { foreignKey: 'industrial_id', targetKey: 'industrialId'});
+        db.Company.belongsToMany(db.Task, { foreignKey: 'company_id', through: 'task_company_mapper' });
     }
 };
 
-module.exports = NiModule;
+module.exports = Company;
