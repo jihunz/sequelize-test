@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const morgan = require('morgan');
-const nunjucks = require('nunjucks');
 
 const { sequelize } = require('./models'); //db.sequelize
 
@@ -12,10 +11,6 @@ const commentsRouter = require('./routes/comments');
 const app = express();
 app.set('port', process.env.PORT || 3333);
 app.set('view engine', 'html');
-nunjucks.configure('views', {
-    express: app,
-    watch: true
-});
 
 // 서버 시작 시 데이터베이스와 연결하기 위한 함수
 sequelize.sync({ force: false }) // true: 테이블 생성, false: 테이블 비생성
