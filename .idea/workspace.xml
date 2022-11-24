@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0db308d-718c-494c-b59c-b0acff349fb5" name="Default Changelist" comment="" />
+    <list default="true" id="b0db308d-718c-494c-b59c-b0acff349fb5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,9 +17,16 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="fix" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectId" id="2HwK5mdSkFRcZYbDLuQtgffC2Sp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -42,6 +51,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\workspace-2022\webstorm\sequilizetest\routes" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\workspace-2022\webstorm\sequilizetest" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -63,7 +75,28 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="2808" y="122" key="MergeDialog" timestamp="1669249524824">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="2808" y="122" key="MergeDialog/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1669249524824" />
+    <state x="3542" y="404" key="MultipleFileMergeDialog" timestamp="1669249524828">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="3542" y="404" key="MultipleFileMergeDialog/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1669249524828" />
     <state x="358" y="128" key="SettingsEditor" timestamp="1669215711622">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -80,6 +113,10 @@
     </state>
     <state x="542" y="267" width="674" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1669218161098" />
     <state x="3523" y="415" width="633" height="570" key="find.popup/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1669202078085" />
+    <state x="3602" y="330" key="git4idea.branch.GitSmartOperationDialog" timestamp="1669249518069">
+      <screen x="2560" y="0" width="2560" height="1400" />
+    </state>
+    <state x="3602" y="330" key="git4idea.branch.GitSmartOperationDialog/0.0.2560.1400/2560.0.2560.1400@2560.0.2560.1400" timestamp="1669249518069" />
     <state x="414" y="245" key="git4idea.merge.GitPullDialog" timestamp="1669218130288">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
