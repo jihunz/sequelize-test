@@ -13,7 +13,7 @@ app.set('port', process.env.PORT || 3333);
 app.set('view engine', 'html');
 
 // 서버 시작 시 데이터베이스와 연결하기 위한 함수
-sequelize.sync({ force: false }) // true: 테이블 생성, false: 테이블 비생성
+sequelize.sync({ force: true }) // true: 테이블 생성, false: 테이블 비생성
     .then(() => {
         console.log('데이터베이스 연결됨');
     }).catch((e) => {
@@ -22,7 +22,7 @@ sequelize.sync({ force: false }) // true: 테이블 생성, false: 테이블 비
 
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.json());
+app.use(express.json());``
 app.use(express.urlencoded({ extended: false }));
 
 app.use((err, req, res, next) => {
